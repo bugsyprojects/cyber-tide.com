@@ -21,6 +21,7 @@ figure,
 blockquote {
   margin: 0;
   padding: 0;
+  
 }
 
 /* Контейнер */
@@ -40,13 +41,14 @@ h5,
 h6 {
   font-weight: 800;
   margin-bottom: 20px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Jaro", sans-serif;
 }
 
 /* Абзаци */
 p {
   margin-bottom: 20px;
   line-height: 1.5;
+  
 }
 
 /* Список без стилів */

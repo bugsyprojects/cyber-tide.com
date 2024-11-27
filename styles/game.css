@@ -1,68 +1,50 @@
-/* Общий фон и структура */
-.win-forge-play {
-  padding: 60px 20px;
-  background: #000000; /* Тёмно-серый фон */
-  color: #f5f5f5;
-  text-align: center;
+.cyber-tide-play {
+  background-color: #1a1a1a; /* Темный фон для секции */
+  padding: 160px 20px;
+  color: #fff;
 }
 
-/* Контейнер */
-.win-forge-container {
+.cyber-tide-container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Заголовок */
-.win-forge-title {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 30px;
-  color: #f39c12; /* Золотой акцент */
-  text-transform: uppercase;
-}
-
-/* Игровой фрейм */
-.win-forge-frame {
-  margin: 0 auto 40px;
-  max-width: 800px;
-  background: #2b2b2b;
+.cyber-tide-content {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8); /* Легкая прозрачность для контента */
+  padding: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  padding: 10px;
 }
 
-.win-forge-frame iframe {
+.cyber-tide-title {
+  font-size: 2.5rem;
+  color: #ff4d4d;
+  margin-bottom: 20px;
+  font-family: 'Cinzel', serif;
+}
+
+.cyber-tide-frame {
+  margin-bottom: 30px;
+}
+
+.cyber-tide-frame iframe {
   width: 100%;
-  height: 600px;
-  border: none;
-  border-radius: 5px;
+  height: 500px; /* Подгоняем высоту фрейма */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Текст описания */
-.win-forge-description {
-  text-align: left;
-  margin: 0 auto;
-  max-width: 800px;
-  font-size: 16px;
+.cyber-tide-description {
+  font-size: 1.2rem;
+  color: #eaeaea;
   line-height: 1.8;
-  color: #e0e0e0;
 }
 
-.win-forge-description strong {
-  color: #f39c12;
+.cyber-tide-description p {
+  margin-bottom: 20px;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-  .win-forge-title {
-    font-size: 28px;
-  }
-
-  .win-forge-frame iframe {
-    height: 400px;
-  }
-
-  .win-forge-description {
-    font-size: 14px;
-  }
+.cyber-tide-description strong {
+  color: #ff4d4d;
 }

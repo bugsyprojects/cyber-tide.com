@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+  background: rgba(0, 0, 0, 0); 
   z-index: 10;
 }
 
@@ -38,12 +38,12 @@
 }
 
 .logo-text__ol {
-  color: #42e914fb;
+  color: rgb(250, 6, 6);
   font-weight: 800;
 }
 
 .logo-text__serwis {
-  color: #1086e1;
+  color: #ffffff;
 }
 
 .header__nav {
@@ -153,7 +153,7 @@
 
 .menu__links a:hover {
   background-color: rgba(255, 255, 255, 0.1);
-  color: #04fd3a;
+  color: #fd2104;
 }
 
 
@@ -218,7 +218,7 @@
   }
 
   .header__nav a:hover {
-    background-color: #08a62b;
+    background-color: #ee2906;
     color: #ffffff;
   }
 

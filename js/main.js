@@ -60,3 +60,100 @@ document.querySelectorAll('.faq-question').forEach(question => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const timerElement = document.getElementById("timer");
+  let timeLeft = 30; // Начальное время на таймере
+  let countdown; // Переменная для хранения интервала
+
+  // Функция для запуска таймера
+  function startTimer() {
+    timeLeft = 30; // Сбрасываем таймер
+    timerElement.querySelector("span").textContent = timeLeft;
+
+    countdown = setInterval(() => {
+      timeLeft--;
+      timerElement.querySelector("span").textContent = timeLeft;
+
+      // Если таймер заканчивается
+      if (timeLeft <= 0) {
+        clearInterval(countdown); // Останавливаем текущий интервал
+        startTimer(); // Перезапускаем таймер
+      }
+    }, 1000);
+  }
+
+  // Запускаем таймер при загрузке страницы
+  startTimer();
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const choiceButtons = document.querySelectorAll(".choice-button");
+  const resultElement = document.querySelector(".vampire-hunter__result");
+  const gameBlock = document.querySelector(".game-block");
+  const choicesContainer = document.querySelector(".vampire-hunter__choices");
+
+  choiceButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const choice = e.target.dataset.choice;
+
+      if (choice === "weapon") {
+        resultElement.textContent = "You chose a silver dagger. The perfect weapon for the hunt!";
+      } else if (choice === "path") {
+        resultElement.textContent = "You chose the path of shadows. Beware, danger awaits!";
+        
+        // Change the background for the path choice
+        document.body.style.background = "url('/assets/images/dark-bg.webp') no-repeat center center/cover";
+      }
+
+      // Hide the choices buttons
+      choicesContainer.style.display = "none";
+
+      // Show the game block
+      gameBlock.style.display = "block";
+    });
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const faqItems = document.querySelectorAll(".faq__item");
+
+  faqItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      // Переключаем класс "open", чтобы показать/скрыть ответ
+      item.classList.toggle("open");
+    });
+  });
+});
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+  const successMessage = document.getElementById("success-message");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Останавливаем стандартное поведение формы
+
+    // Здесь можно добавить логику для реальной отправки данных, если необходимо
+
+    // Скрыть форму
+    form.style.display = "none";
+
+    // Показать сообщение об успешной отправке
+    successMessage.style.display = "block";
+
+    // Через 3 секунды скрыть сообщение и восстановить форму
+    setTimeout(() => {
+      successMessage.style.display = "none";
+      form.style.display = "block";
+      form.reset(); // Сбросить все поля формы
+    }, 3000); // Устанавливаем таймер на 3 секунды
+  });
+});
